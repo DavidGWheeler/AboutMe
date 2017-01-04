@@ -26,6 +26,14 @@ aside {
 
 }
 
+ul {
+  margin-left: 25px;
+}
+
 li {
-  list-style-type: lower-latin;
+  list-style-type: lower-roman;
+}
+
+.map {
+  border: 10px solid black;
 }
