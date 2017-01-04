@@ -1,8 +1,9 @@
-h* {
+h1 {
   font-family: fantasy;
-  position: absolute;
-  top: auto;
-  left: 10ems;
+  margin-left: 10px;
+  /*position: relative;
+  top: 20px;
+  left: 10px;*/
 }
 
 p {
@@ -22,5 +23,9 @@ aside {
 .bio {
   border: 2px solid black;
   border-style: groove;
-  
+
+}
+
+li {
+  list-style-type: lower-latin;
 }
