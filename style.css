@@ -7,3 +7,7 @@ p {
   font-family: serif;
   font-style: oblique;
 }
+
+main {
+  background-color: darkgrey;
+}
