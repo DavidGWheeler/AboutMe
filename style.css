@@ -1,6 +1,8 @@
 h* {
   font-family: fantasy;
-  text-align: center;
+  position: absolute;
+  top: auto;
+  left: 10ems;
 }
 
 p {
@@ -10,4 +12,15 @@ p {
 
 main {
   background-color: lightgrey;
+}
+
+aside {
+  font-style: italic;
+  font-size: 0.5ems;
+}
+
+.bio {
+  border: 2px solid black;
+  border-style: groove;
+  
 }
