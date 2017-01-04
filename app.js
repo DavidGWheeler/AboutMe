@@ -12,4 +12,6 @@ var userName = prompt('Hello there! What is your name?');
     console.log('Hello ' + userName);
   };
 //make a variable array
-var answer1 = []
+var answer1 = age;
+var answer2 = [];
+var answer3 = '';
