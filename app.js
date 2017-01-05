@@ -53,7 +53,7 @@ var question3 = prompt('What is the name of David\'s favorite pet?');
 
 //ask question 4
     var question4 = prompt('How long has David been working in software without knowing how to code?');
-      if (question4 === answer4) {
+      if (question4 === answer4 || question4 === '16') {
         console.log('True!  I have been at this for ' + answer4 + ' which is a long time to work in the dark!');
       } else {
         console.log(question4 + ' is not correct.');
