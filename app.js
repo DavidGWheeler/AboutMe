@@ -46,17 +46,17 @@ var question1 = prompt('Is David\'s favorite color ' + answer3 + '? Y or N: ').t
     if (question2 === 'y') {
     console.log('Yup, I am ' + age);
     alert('Yup, I am ' + age);
-  } else if (question2 > age || question2 === 'n') {
-    console.log('Hey!  I\'m not that old!');
-    alert('Hey!  I\'m not that old!');
   } else {
+    console.log('Wrong, I am ' + age + '.');
+    alert('Wrong, I am ' + age + '.');
+//} else {
     console.log('Flattery will get you somewhere.  Just maybe not where you expected! ' + question2 + ' is not correct.');
     alert('Flattery will get you somewhere.  Just maybe not where you expected! ' + question2 + ' is not correct.');
   };
 
 //ask question 3
 //var question3 = prompt('What is the name of David\'s favorite pet?');
-  var question3 = prompt('My pets are named:' + answer2[0, 1, 2] + 'Is the name of David\'s favorite pet?' + answer2[0] + '? Y or N: ').toLowerCase();
+  var question3 = prompt('My pets are named:' + answer2[0] + ' ' + answer2[1] + 'and' + answer2[0] + ' ' + 'Is the name of David\'s favorite pet ' + answer2[0] + '? Y or N: ').toLowerCase();
     console.log(answer2[0, 1, 2]);
     console.log(question3);
   //if (question3 === answer2[0]) {
@@ -66,9 +66,9 @@ var question1 = prompt('Is David\'s favorite color ' + answer3 + '? Y or N: ').t
 //} else if (question3 === answer2[1]) {
   } else if (question3 === 'n') {
   //console.log(answer2[1] + ' is so adorable!  She just isn\'t my favorite.');
-    console.log(answer2[1] + ' is so adorable!  She just isn\'t my favorite.' + answer2[2] + ' ' + ' is an old man of a cat at 16 years of age! Kinda smelly too...');
+    console.log('Wrong. ' + answer2[1] + ' is so adorable!  She just isn\'t my favorite.' + answer2[2] + ' ' + ' is an old man of a cat at 16 years of age! Kinda smelly too...');
   //alert(answer2[1] + ' is so adorable!  She just isn\'t my favorite.');
-    alert(answer2[1] + ' is so adorable!  She just isn\'t my favorite.' + answer2[2] + ' ' + ' is an old man of a cat at 16 years of age! Kinda smelly too...');
+    alert('Wrong. ' + answer2[1] + ' is so adorable!  She just isn\'t my favorite.' + answer2[2] + ' ' + ' is an old man of a cat at 16 years of age! Kinda smelly too...');
   } else if (question3 === answer2[2]) {
     console.log(answer2[2] + ' is an old man of a cat at 16 years of age!');
     alert(answer2[2] + ' is an old man of a cat at 16 years of age!');
