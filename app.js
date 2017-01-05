@@ -34,7 +34,8 @@ var question1 = prompt('Is David\'s favorite color ' + answer3 + '? Y or N: ').t
     alert('Right! ' + userName + ' guessed my favorite color is ' + answer3 + '!');
   } else {
     console.log('Sorry, ' + userName + ' but ' + question1 + ' is not my favorite color!');
-    alert('Sorry, ' + userName + ' but ' + question1 + ' is not my favorite color!');
+  //alert('Sorry, ' + userName + ' but ' + question1 + ' is not my favorite color!');
+    alert('Sorry, ' + userName + ' but ' + answer3 + ' really is my favorite color!');
   };
 
 //ask the second question
@@ -95,8 +96,8 @@ var question1 = prompt('Is David\'s favorite color ' + answer3 + '? Y or N: ').t
     console.log(question5);
   //if (question5 === answer5) {
     if (question5 === 'y') {
-    console.log('Right!  I\'m here to ' + question5 + ' And to rock the party!');
-    alert('Right!  I\'m here to ' + question5 + ' And to rock the party!');
+    console.log('Right!  I\'m here to ' + answer5 + ' And to rock the party!');
+    alert('Right!  I\'m here to ' + answer5 + ' And to rock the party!');
   } else {
     console.log('I\'m actually here to ' + answer5 + ' And to rock the party!');
     alert('I\'m actually here to ' + answer5 + ' And to rock the party!');
