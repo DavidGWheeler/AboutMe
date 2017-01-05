@@ -84,3 +84,5 @@ var question3 = prompt('What is the name of David\'s favorite pet?');
     console.log('I\'m actually here to ' + answer5 + ' And to rock the party!');
     alert('I\'m actually here to ' + answer5 + ' And to rock the party!');
   };
+
+  
