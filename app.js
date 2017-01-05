@@ -62,12 +62,15 @@ var question1 = prompt('Is David\'s favorite color ' + answer3 + '? Y or N: ').t
     if (question3 === 'y') {
     console.log(answer2[0] + ' is the most gentle, sweet little pitbull ever!  She is my favorite, but don\'t tell the cats!');
     alert(answer2[0] + ' is the most gentle, sweet little pitbull ever!  She is my favorite, but don\'t tell the cats!');
-  } else if (question3 === answer2[1]) {
-    console.log(answer2[1] + ' is so adorable!  She just isn\'t my favorite.');
-    alert(answer2[1] + ' is so adorable!  She just isn\'t my favorite.');
+//} else if (question3 === answer2[1]) {
+  } else if (question3 === 'n') {
+  //console.log(answer2[1] + ' is so adorable!  She just isn\'t my favorite.');
+    console.log(answer2[1] + ' is so adorable!  She just isn\'t my favorite.' + answer2[2] + ' is an old man of a cat at 16 years of age! Kinda smelly too...');
+  //alert(answer2[1] + ' is so adorable!  She just isn\'t my favorite.');
+    alert(answer2[1] + ' is so adorable!  She just isn\'t my favorite.' + answer2[2] + ' is an old man of a cat at 16 years of age! Kinda smelly too...');
   } else if (question3 === answer2[2]) {
-    console.log(answer2 + ' is an old man of a cat at 16 years of age!');
-    alert(answer2 + ' is an old man of a cat at 16 years of age!');
+    console.log(answer2[2] + ' is an old man of a cat at 16 years of age!');
+    alert(answer2[2] + ' is an old man of a cat at 16 years of age!');
   } else {
     console.log('Well, their names are actually ' + answer2[0] + ' ' + answer2[1] + ' and ' + answer2[2] + '.');
     alert('Well, their names are actually ' + answer2[0] + ' ' + answer2[1] + ' and ' + answer2[2] + '.');
