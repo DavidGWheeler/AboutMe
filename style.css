@@ -1,9 +1,39 @@
-h* {
+h1 {
   font-family: fantasy;
-  text-align: center;
+  margin-left: 10px;
+  /*position: relative;
+  top: 20px;
+  left: 10px;*/
 }
 
 p {
   font-family: serif;
   font-style: oblique;
+}
+
+main {
+  background-color: lightgrey;
+}
+
+aside {
+  font-style: italic;
+  font-size: 0.5ems;
+}
+
+.bio {
+  border: 2px solid black;
+  border-style: groove;
+
+}
+
+ul {
+  margin-left: 25px;
+}
+
+li {
+  list-style-type: lower-roman;
+}
+
+.map {
+  border: 10px solid black;
 }
