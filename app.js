@@ -23,9 +23,13 @@ var answer4 = '17 years';
 var answer5 = 'To Learn More, Faster!';
 
 //ask the first question
+/*this isn't Y/N
 var question1 = prompt('What is David\'s favorite color?');
+*/
+var question1 = prompt('Is David\'s favorite color ' + answer3 + '? Y or N: ').toLowerCase();
   console.log(question1);
-  if (question1 === answer3) {
+//  if (question1 === answer3) {
+    if (question1 === 'y') {
     console.log('Right! ' + userName + ' guessed my favorite color is ' + answer3 + '!');
     alert('Right! ' + userName + ' guessed my favorite color is ' + answer3 + '!');
   } else {
@@ -34,9 +38,11 @@ var question1 = prompt('What is David\'s favorite color?');
   };
 
 //ask the second question
-var question2 = prompt('What is David\'s age?');
+//var question2 = prompt('What is David\'s age?');
+  var question2 = prompt('Is David\'s age ' + age + '?' 'Y or N: ').toLowerCase();
     console.log(question2);
-  if (question2 === age) {
+  //if (question2 === age) {
+    if (question2 === 'y') {
     console.log('Yup, I am ' + age);
     alert('Yup, I am ' + age);
   } else if (question2 > age) {
@@ -48,9 +54,11 @@ var question2 = prompt('What is David\'s age?');
   };
 
 //ask question 3
-var question3 = prompt('What is the name of David\'s favorite pet?');
+//var question3 = prompt('What is the name of David\'s favorite pet?');
+  var question3 = prompt('My pets are named:' + answer2[0 , 1 , 2 ] + 'Is the name of David\'s favorite pet?' + answer2[0] + '?' 'Y or N: ').toLowerCase();
     console.log(question3);
-  if (question3 === answer2[0]) {
+  //if (question3 === answer2[0]) {
+    if (question3 === 'y') {
     console.log(answer2[0] + ' is the most gentle, sweet little pitbull ever!  She is my favorite, but don\'t tell the cats!');
     alert(answer2[0] + ' is the most gentle, sweet little pitbull ever!  She is my favorite, but don\'t tell the cats!');
   } else if (question3 === answer2[1]) {
