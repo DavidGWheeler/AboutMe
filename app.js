@@ -56,7 +56,7 @@ var question3 = prompt('What is the name of David\'s favorite pet?');
       if (question4 === answer4) {
         console.log('True!  I have been at this for ' + answer4 + ' which is a long time to work in the dark!');
       } else {
-        console.log(question4 + 'is not correct.');
+        console.log(question4 + ' is not correct.');
       };
 
 //ask question 5
