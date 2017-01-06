@@ -12,6 +12,7 @@ if (userName == '') {
 } else {
   console.log('Hello ' + userName + '!');
   alert('Hello ' + userName + '!');
+  document.write('<ul>\n<li>' + userName + '</li>\n</ul>');
 };
 
 //make a variable array
