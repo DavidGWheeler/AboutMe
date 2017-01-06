@@ -102,9 +102,10 @@ if (question5 === 'y') {
   alert('I\'m actually here to ' + answer5 + ' And to rock the party!');
 };
 
+//generate random number for question 6
 var ranNum = Math.floor((Math.random() * 9) + 1);
 console.log(ranNum);
-
+//ask question 6 up to 4 times
 for (var i = 0; i < 4; i++) {
   var question6 = parseInt(prompt('Please guess a number between 1 and 10:'));
   console.log(question6);
@@ -122,3 +123,31 @@ for (var i = 0; i < 4; i++) {
     alert('Are you sure you entered a number? You only have ' + (3 - i) + ' tries left.');
   }
 };
+
+//question 7
+var workedAt = ['Nintendo ', 'Microsoft ', 'Amazon '];
+console.log(workedAt);
+for (var i = 0; i < 6; i++) {
+  var question7 = (prompt('Can you guess a company David has worked for?'));
+  console.log(question7);
+  for (var j = 0; j < workedAt.length; j++) {
+    if (question7.toLowerCase() === workedAt[j].toLowerCase().trim()) {
+      console.log('Correct');
+      var workFeedback = 'Correct! David has worked at: ' + workedAt[0] + ' and ' + workedAt[1] + ' and ' + workedAt[2] + '.';
+      i = 6;
+      console.log(i);
+      break;
+    } else if (i === 5) {
+      var workFeedback = 'That doesn\'t match any of the companies I have worked at: ' + workedAt[0] + ' and ' + workedAt[1] + ' and ' + workedAt[2] + '.';
+      console.log(i);
+      console.log('That doesn\'t match ' + workedAt);
+      // alert('That doesn\'t match any of these companies I have worked at: ' + workedAt[0] + ' and ' + workedAt[1] + ' and ' + workedAt[2] + '.');
+    } else {
+      console.log(i);
+      var workFeedback = 'That doesn\'t match any of the companies I have worked at. You have ' + (5 - i) + ' tries left.';
+      // alert(workFeedback);
+    }
+  }
+  alert(workFeedback);
+};
+console.log('Done guessing.');
