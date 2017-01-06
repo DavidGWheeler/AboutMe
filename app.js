@@ -49,8 +49,8 @@ if (question2 === 'y') {
   console.log('Wrong, I am ' + age + '.');
   alert('Wrong, I am ' + age + '.');
 //} else {
-  console.log('Flattery will get you somewhere.  Just maybe not where you expected! ' + question2 + ' is not correct.');
-  alert('Flattery will get you somewhere.  Just maybe not where you expected! ' + question2 + ' is not correct.');
+  // console.log('Flattery will get you somewhere.  Just maybe not where you expected! ' + question2 + ' is not correct.');
+  // alert('Flattery will get you somewhere.  Just maybe not where you expected! ' + question2 + ' is not correct.');
 };
 
 //ask question 3
@@ -86,7 +86,7 @@ if (question4 === 'y') {
   alert('True! I have been at this for ' + answer4 + ' which is a long time to work in the dark!');
 } else {
   console.log(question4 + ' is not correct.');
-  alert(question4 + ' is not correct.');
+  alert('That is not correct.');
 };
 
 //ask question 5
@@ -106,9 +106,19 @@ var ranNum = Math.floor((Math.random() * 9) + 1);
 console.log(ranNum);
 
 for (var i = 0; i < 4; i++) {
-  var question6 = prompt('Please guess a number between 1 and 10:');
+  var question6 = parseInt(prompt('Please guess a number between 1 and 10:'));
   console.log(question6);
-  if (question6 === true) {
-
+  if (question6 === ranNum) {
+    alert('Great guess! You got it right.');
+    break;
+  } else if (question6 > ranNum) {
+    console.log('Sorry, your guess is too high. You have ' + (3 - i) + ' tries left.');
+    alert('Sorry, your guess is too high. You have ' + (3 - i) + ' tries left.');
+  } else if (question6 < ranNum) {
+    console.log('Sorry, your guess is too low. You have ' + (3 - i) + ' tries left.');
+    alert('Sorry, your guess is too low. You have ' + (3 - i) + ' tries left.');
+  } else {
+    console.log('Are you sure you entered a number? You only have ' + (3 - i) + ' tries left.');
+    alert('Are you sure you entered a number? You only have ' + (3 - i) + ' tries left.');
   }
-}
+};
