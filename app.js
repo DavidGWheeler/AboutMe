@@ -101,3 +101,14 @@ if (question5 === 'y') {
   console.log('I\'m actually here to ' + answer5 + ' And to rock the party!');
   alert('I\'m actually here to ' + answer5 + ' And to rock the party!');
 };
+
+var ranNum = Math.floor((Math.random() * 9) + 1);
+console.log(ranNum);
+
+for (var i = 0; i < 4; i++) {
+  var question6 = prompt('Please guess a number between 1 and 10:');
+  console.log(question6);
+  if (question6 === true) {
+
+  }
+}
