@@ -1,25 +1,25 @@
 'use strict';
 
+
 //variable of my age
 var age = '42';
 console.log(age);
 
 //get the user's name and log to console
 var userName = prompt('Hello there! What is your name?');
+//make a variable array. todo: get my answers into a single array?
+var answer2 = ['Aphrodite ', 'Minerva ', 'Stupid '];
+var answer3 = 'blue';
+var answer4 = '17 years';
+var answer5 = 'To Learn More, Faster!';
 
-if (userName == '') {
-  var userName = prompt('Please type a name here!');
+if (userName === '') {
+  userName = prompt('Please type a name here!');
   console.log(userName);
 } else {
   console.log('Hello ' + userName + '!');
   alert('Hello ' + userName + '!');
 };
-
-//make a variable array
-var answer2 = ['Aphrodite ', 'Minerva ', 'Stupid '];
-var answer3 = 'blue';
-var answer4 = '17 years';
-var answer5 = 'To Learn More, Faster!';
 
 //ask the first question
 var question1 = prompt('Is David\'s favorite color ' + answer3 + '? Y or N: ').toLowerCase();
@@ -85,7 +85,7 @@ console.log(question5);
 if (question5 === 'y') {
   console.log('Right!  I\'m here to ' + answer5 + ' And to rock the party!');
   alert('Right!  I\'m here to ' + answer5 + ' And to rock the party!');
-  
+
 } else {
   console.log('I\'m actually here to ' + answer5 + ' And to rock the party!');
   alert('I\'m actually here to ' + answer5 + ' And to rock the party!');
@@ -107,7 +107,7 @@ for (var i = 0; i < 4; i++) {
     console.log('Sorry, your guess is too low. You have ' + (3 - i) + ' tries left.');
     alert('Sorry, your guess is too low. You have ' + (3 - i) + ' tries left.');
   } else {
-    console.log('Are you sure you entered a number? You only have ' + (3 - i) + ' tries left.');
-    alert('Are you sure you entered a number? You only have ' + (3 - i) + ' tries left.');
-  }
+    console.log('I\'m actually here to ' + answer5 + ' And to rock the party!');
+    alert('I\'m actually here to ' + answer5 + ' And to rock the party!');
+  };
 };
