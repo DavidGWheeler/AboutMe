@@ -1,12 +1,12 @@
 'use strict';
 
-
 //variable of my age
 var age = '42';
 console.log(age);
 
 //get the user's name and log to console
 var userName = prompt('Hello there! What is your name?');
+
 //make a variable array. todo: get my answers into a single array?
 var answer2 = ['Aphrodite ', 'Minerva ', 'Stupid '];
 var answer3 = 'blue';
@@ -14,6 +14,12 @@ var answer4 = '17 years';
 var answer5 = 'To Learn More, Faster!';
 
 if (userName === '') {
+  userName = prompt('Please type a name here!');
+  console.log(userName);
+} else if (userName === null) {
+  userName = prompt('Please type a name here!');
+  console.log(userName);
+} else if (userName === NaN){
   userName = prompt('Please type a name here!');
   console.log(userName);
 } else {
@@ -28,6 +34,13 @@ console.log(question1);
 if (question1 === 'y') {
   console.log('Right! ' + userName + ' guessed my favorite color is ' + answer3 + '!');
   alert('Right! ' + userName + ' guessed my favorite color is ' + answer3 + '!');
+} else if (question1 === null) {
+  console.log('User canceled');
+  question1 = prompt('Are you sure you don\'t want to git an answer?').toLowerCase();
+} if (question1 === 'y') {
+  console.log('User verified cancel.');
+  alert(userName + 'Did not want to answer this one!');
+  //todo: document.write()
 } else {
   console.log('Sorry, ' + userName + ' but ' + question1 + ' is not my favorite color!');
   alert('Sorry, ' + userName + ' but ' + answer3 + ' really is my favorite color!');
@@ -47,7 +60,7 @@ if (question2 === 'y') {
 };
 
 //ask question 3
-var question3 = prompt('My pets are named:' + answer2[0] + ' ' + answer2[1] + 'and' + answer2[0] + ' ' + 'Is the name of David\'s favorite pet ' + answer2[0] + '? Y or N: ').toLowerCase();
+var question3 = prompt('My pets are named:' + answer2[0] + ', ' + answer2[1] + 'and ' + answer2[0] + ' ' + 'Is the name of David\'s favorite pet ' + answer2[0] + '? Y or N: ').toLowerCase();
 console.log(answer2[0, 1, 2]);
 console.log(question3);
 
@@ -63,7 +76,7 @@ if (question3 === 'y') {
   alert(answer2[2] + ' is an old man of a cat at 16 years of age!');
 } else {
   console.log('Well, their names are actually ' + answer2[0] + ' ' + answer2[1] + ' and ' + answer2[2] + '.');
-  alert('Well, their names are actually ' + answer2[0] + ' ' + answer2[1] + ' and ' + answer2[2] + '.');
+  alert('Well, their names are actually ' + answer2[0] + ', ' + answer2[1] + ' and ' + answer2[2] + '.');
 };
 
 //ask question 4
@@ -85,12 +98,12 @@ console.log(question5);
 if (question5 === 'y') {
   console.log('Right!  I\'m here to ' + answer5 + ' And to rock the party!');
   alert('Right!  I\'m here to ' + answer5 + ' And to rock the party!');
-
 } else {
   console.log('I\'m actually here to ' + answer5 + ' And to rock the party!');
   alert('I\'m actually here to ' + answer5 + ' And to rock the party!');
 };
 
+//ask question 6
 var ranNum = Math.floor((Math.random() * 9) + 1);
 console.log(ranNum);
 

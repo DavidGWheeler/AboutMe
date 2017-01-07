@@ -12,7 +12,7 @@ p {
 }
 
 main {
-  background-color: lightgrey;
+  background-color: lightblue;
 }
 
 aside {
@@ -36,4 +36,22 @@ li {
 
 .map {
   border: 10px solid black;
+}
+
+.topTen {
+  background-image: url(https://martinabex.files.wordpress.com/2013/04/top_ten_list_c00230_19547.gif);
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: white;
+  border: 5px solid black;
+}
+
+.topTen li {
+  animation-delay: 01;
+  text-decoration: underline;
+  font-family: cursive;
+  font-style: oblique;
+  font-size: 2em;
+  margin-left: 15px;
 }
