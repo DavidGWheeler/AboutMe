@@ -28,52 +28,68 @@ if (userName === '') {
 };
 
 //ask the first question
-var question1 = prompt('Is David\'s favorite color ' + answer3 + '? Y or N: ').toLowerCase();
+var question1 = prompt('Is David\'s favorite color ' + answer3 + '? Y or N: ');
 console.log(question1);
 
-if (question1 === 'y') {
-  console.log('Right! ' + userName + ' guessed my favorite color is ' + answer3 + '!');
-  alert('Right! ' + userName + ' guessed my favorite color is ' + answer3 + '!');
-} else if (question1 === null) {
-  console.log('User canceled');
-  question1 = prompt('Are you sure you don\'t want to git an answer?').toLowerCase();
-} if (question1 === 'y') {
-  console.log('User verified cancel.');
+if (question1 === '' || question1 === NaN || question1 === null) {
+  console.log('User canceled:' + question1);
+  var question1conf = prompt('Are you sure you don\'t want to give an answer?');
+  console.log('confirmed: ' + question1conf);
+} else if (question1conf === 'y' || question1conf === null || question1conf === NaN || question1conf === '') {
+  console.log('confirmed' + question1conf);
   alert(userName + 'Did not want to answer this one!');
   //todo: document.write()
+} else if (question1.toLowerCase === 'y') {
+  console.log('Right! ' + userName + ' guessed my favorite color is ' + answer3 + '!');
+  console.log(question1);
+  alert('Right! ' + userName + ' guessed my favorite color is ' + answer3 + '!');
+} else if (question1.toLowerCase === 'n'){
+  console.log(question1);
+  alert('Sorry, ' + userName + ' but that\'s wrong. ' + answer3 + ' really is my favorite color!');
 } else {
-  console.log('Sorry, ' + userName + ' but ' + question1 + ' is not my favorite color!');
-  alert('Sorry, ' + userName + ' but ' + answer3 + ' really is my favorite color!');
+  alert('Wat?!');
 };
 
 //ask the second question
 
-var question2 = prompt('Is David\'s age ' + age + '? Y or N: ').toLowerCase();
+var question2 = prompt('Is David\'s age ' + age + '? Y or N: ');
 console.log(question2);
 
-if (question2 === 'y') {
-  console.log('Yup, I am ' + age);
-  alert('Yup, I am ' + age);
-} else {
+if (question2 === '' || question2 === NaN || question2 === null) {
+  console.log('User canceled:' + question2);
+  var question2Conf = prompt('Are you sure you don\'t want to give an answer?');
+  console.log('confirmed: ' + question2Conf);
+} else if (question2Conf.toLowerCase === 'y' || question2Conf === null || question2Conf === NaN || question2Conf === '') {
+  console.log('confirmed' + question2Conf);
+  alert(userName + 'Did not want to answer this one!');
+} else if (question2.toLowerCase === 'y') {
+  console.log('Yup, I am ' + age + '.');
+  alert('Yup, I am ' + age + '.');
+} else if (question2.toLowerCase === 'n'){
   console.log('Wrong, I am ' + age + '.');
   alert('Wrong, I am ' + age + '.');
+} else {
+  alert('Wat?!');
 };
 
 //ask question 3
-var question3 = prompt('My pets are named:' + answer2[0] + ', ' + answer2[1] + 'and ' + answer2[0] + ' ' + 'Is the name of David\'s favorite pet ' + answer2[0] + '? Y or N: ').toLowerCase();
-console.log(answer2[0, 1, 2]);
+var question3 = prompt('My pets are named:' + answer2[0] + ', ' + answer2[1] + 'and ' + answer2[0] + '\n' + 'Is the name of David\'s favorite pet ' + answer2[0] + '? Y or N: ');
+console.log(answer2[0,1,2]);
 console.log(question3);
 
-if (question3 === 'y') {
-  console.log(answer2[0] + ' is the most gentle, sweet little pitbull ever!  She is my favorite, but don\'t tell the cats!');
-  alert(answer2[0] + ' is the most gentle, sweet little pitbull ever!  She is my favorite, but don\'t tell the cats!');
+if (question3 === '' || question3 === NaN || question3 === null) {
+  console.log('User canceled ' + question3);
+  var question3Conf = prompt('Are you sure you don\'t want to give an answer?');
+  console.log('confirmed: ' + question3Conf);
+} else if (question3Conf.toLowerCase === 'y' || question3Conf === null || question3Conf === NaN || question3Conf === '') {
+  console.log('confirmed' + question3Conf);
+  alert(userName + 'Did not want to answer this one!');
+} else if (question3.toLowerCase === 'y') {
+  console.log(answer2[0] + ' is the most gentle, sweet little pitbull ever!\n She is my favorite, but don\'t tell the cats!');
+  alert(answer2[0] + ' is the most gentle, sweet little pitbull ever!\n She is my favorite, but don\'t tell the cats!');
 } else if (question3 === 'n') {
-  console.log('Wrong. ' + answer2[1] + ' is so adorable!  She just isn\'t my favorite.' + answer2[2] + ' ' + ' is an old man of a cat at 16 years of age! Kinda smelly too...');
-  alert('Wrong. ' + answer2[1] + ' is so adorable!  She just isn\'t my favorite.' + answer2[2] + ' ' + ' is an old man of a cat at 16 years of age! Kinda smelly too...');
-
-} else if (question3 === answer2[2]) {
-  console.log(answer2[2] + ' is an old man of a cat at 16 years of age!');
-  alert(answer2[2] + ' is an old man of a cat at 16 years of age!');
+  console.log('Wrong. ' + answer2[1] + ' is so adorable!  She just isn\'t my favorite.\n' + answer2[2] + ', ' + ' is an old man of a cat at 16 years of age!\n Kinda smelly too...');
+  alert('Wrong, sorry. But ' + answer2[1] + ' is so adorable!  She just isn\'t my favorite.\n' + '"' + answer2[2] + '"' + ', ' + ' is an old man of a cat at 16 years of age!\n Kinda smelly too...\n The correct answer was ' + answer2[0] + '.');
 } else {
   console.log('Well, their names are actually ' + answer2[0] + ' ' + answer2[1] + ' and ' + answer2[2] + '.');
   alert('Well, their names are actually ' + answer2[0] + ', ' + answer2[1] + ' and ' + answer2[2] + '.');
@@ -111,6 +127,7 @@ for (var i = 0; i < 4; i++) {
   var question6 = parseInt(prompt('Please guess a number between 1 and 10:'));
   console.log(question6);
   if (question6 === ranNum) {
+    console.log(ranNum + 'guessed');
     alert('Great guess! You got it right.');
     break;
   } else if (question6 > ranNum) {
