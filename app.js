@@ -124,3 +124,30 @@ for (var i = 0; i < 4; i++) {
     alert('I\'m actually here to ' + answer5 + ' And to rock the party!');
   };
 };
+
+//question 7
+var workedAt = ['Nintendo ', 'Microsoft ', 'Amazon '];
+console.log(workedAt);
+for (var h = 0; h < 6; h++) {
+  var question7 = (prompt('Can you guess a company David has worked for?'));
+  console.log(question7);
+  for (var j = 0; j < workedAt.length; j++) {
+    if (question7.toLowerCase() === workedAt[j].toLowerCase().trim()) {
+      console.log('Correct');
+      var workFeedback = 'Correct! David has worked at: ' + workedAt[0] + ' and ' + workedAt[1] + ' and ' + workedAt[2] + '.';
+      i = 6;
+      console.log(i);
+      break;
+    } else if (i === 5) {
+      workFeedback = 'That doesn\'t match any of the companies I have worked at: ' + workedAt[0] + ' and ' + workedAt[1] + ' and ' + workedAt[2] + '.';
+      console.log(i);
+      console.log('That doesn\'t match ' + workedAt);
+    } else {
+      console.log(i);
+      workFeedback = 'That doesn\'t match any of the companies I have worked at. You have ' + (5 - i) + ' tries left.';
+    }
+  }
+  alert(workFeedback);
+  break;
+};
+console.log('Done guessing.');
