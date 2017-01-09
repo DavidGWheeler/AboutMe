@@ -62,15 +62,19 @@ console.log(question3);
 if (question3 === 'y') {
   console.log(answer2[0] + ' is the most gentle, sweet little pitbull ever!  She is my favorite, but don\'t tell the cats!');
   alert(answer2[0] + ' is the most gentle, sweet little pitbull ever!  She is my favorite, but don\'t tell the cats!');
+  document.write('<li>' + userName + ' correctly guessed that ' + answer2[0] + ' is my favorite.</li>\n');
 } else if (question3 === 'n') {
   console.log('Wrong. ' + answer2[1] + ' is so adorable!  She just isn\'t my favorite.' + answer2[2] + ' ' + ' is an old man of a cat at 16 years of age! Kinda smelly too...');
   alert('Wrong. ' + answer2[1] + ' is so adorable!  She just isn\'t my favorite.' + answer2[2] + ' ' + ' is an old man of a cat at 16 years of age! Kinda smelly too...');
+  document.write('<li>' + userName + ' didn\'t correctly guess that ' + answer2[0] + ' is my favorite.</li>\n');
 } else if (question3 === answer2[2]) {
   console.log(answer2[2] + ' is an old man of a cat at 16 years of age!');
   alert(answer2[2] + ' is an old man of a cat at 16 years of age!');
+  document.write('<li>' + userName + ' didn\'t correctly guess that ' + answer2[0] + ' is my favorite.</li>\n');
 } else {
   console.log('Well, their names are actually ' + answer2[0] + ' ' + answer2[1] + ' and ' + answer2[2] + '.');
   alert('Well, their names are actually ' + answer2[0] + ' ' + answer2[1] + ' and ' + answer2[2] + '.');
+  document.write('<li>' + userName + ' didn\'t correctly guess that ' + answer2[0] + ' is my favorite.</li>\n');
 };
 
 //ask question 4
@@ -80,9 +84,11 @@ console.log(question4);
 if (question4 === 'y') {
   console.log('True! I have been at this for ' + answer4 + ' which is a long time to work in the dark!');
   alert('True! I have been at this for ' + answer4 + ' which is a long time to work in the dark!');
+  document.write('<li>' + userName + ' correctly guessed that I have been at this for ' + answer4 + '.</li>\n');
 } else {
   console.log(question4 + ' is not correct.');
   alert('That is not correct.');
+  document.write('<li>' + userName + ' didn\'t correctly guess that I have been at this for ' + answer4 + '.</li>\n');
 };
 
 //ask question 5
@@ -92,9 +98,11 @@ console.log(question5);
 if (question5 === 'y') {
   console.log('Right!  I\'m here to ' + answer5 + ' And to rock the party!');
   alert('Right!  I\'m here to ' + answer5 + ' And to rock the party!');
+  document.write('<li>' + userName + ' correctly guessed that I am here to ' + answer5 + '. And to rock the party!</li>\n');
 } else {
   console.log('I\'m actually here to ' + answer5 + ' And to rock the party!');
   alert('I\'m actually here to ' + answer5 + ' And to rock the party!');
+  document.write('<li>' + userName + ' didn\'t correctly guess that I am here to ' + answer5 + '. And to rock the party!</li>\n');
 };
 
 //ask question 6
@@ -107,6 +115,7 @@ for (var i = 0; i < 4; i++) {
   if (question6 === ranNum) {
     console.log(ranNum + 'guessed');
     alert('Great guess! You got it right.');
+    document.write('<li>' + userName + ' correctly guessed: ' + ranNum + '. In: ' + (i + 1) + ' try(s).</li>\n');
     break;
   } else if (question6 > ranNum) {
     console.log('Sorry, your guess is too high. You have ' + (3 - i) + ' tries left.');
@@ -115,8 +124,10 @@ for (var i = 0; i < 4; i++) {
     console.log('Sorry, your guess is too low. You have ' + (3 - i) + ' tries left.');
     alert('Sorry, your guess is too low. You have ' + (3 - i) + ' tries left.');
   } else {
-    console.log('I\'m actually here to ' + answer5 + ' And to rock the party!');
-    alert('I\'m actually here to ' + answer5 + ' And to rock the party!');
+    console.log('Sorry, you ran out of guesses without guessing that ' + ranNum + ' was the number.');
+    alert('Sorry, you ran out of guesses without guessing that ' + ranNum + ' was the number.');
+    document.write('<li>Sorry, ' + userName + ' you ran out of guesses without guessing that ' + ranNum + ' was the number.</li>');
+    break;
   };
 };
 
@@ -134,16 +145,17 @@ for (var z = 0; z < 6; z++) {
       console.log(z);
       break;
     } else if (z === 5) {
-      workFeedback = 'That doesn\'t match any of the companies I have worked at: ' + workedAt[0] + ' and ' + workedAt[1] + ' and ' + workedAt[2] + '.';
+      workFeedback = 'Incorrect. That doesn\'t match any of the companies I have worked at: ' + workedAt[0] + ' and ' + workedAt[1] + ' and ' + workedAt[2] + '.';
       console.log(z);
-      console.log('That doesn\'t match ' + workedAt);
+      console.log('Incorrect. That doesn\'t match ' + workedAt);
 
     } else {
       console.log(z);
-      workFeedback = 'That doesn\'t match any of the companies I have worked at. You have ' + (5 - i) + ' tries left.';
+      workFeedback = 'Incorrect. That doesn\'t match any of the companies I have worked at. You have ' + (5 - i) + ' tries left.';
     }
   }
   alert(workFeedback);
-  document.write('</ul>');
+  document.write('<li>' + userName + '\'s guess was: ' + workFeedback + '</li></ul>');
+  break;
 };
 console.log('Done guessing.');
