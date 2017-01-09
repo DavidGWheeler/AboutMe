@@ -25,20 +25,20 @@ if (userName === '') {
 } else {
   console.log('Hello ' + userName + '!');
   alert('Hello ' + userName + '!');
-  document.write('<section class="answers">\n<h4>' + userName + '\'s answers were: </h4>' + '\n');
+  document.write('<section class="answers">\n<h4>' + userName + '\'s answers were: </h4>\n');
 };
 
 //ask the first question
 var question1 = prompt('Is David\'s favorite color ' + answer3 + '? Y or N: ');
 console.log(question1);
-//  if (question1 === answer3) {
 if (question1.toLowerCase() === 'y') {
   console.log('Right! ' + userName + ' guessed my favorite color is ' + answer3 + '!');
   alert('Right! ' + userName + ' guessed my favorite color is ' + answer3 + '!');
+  document.write('<ul>\n<li>' + userName + ' correctly guess that my favorite color is ' + answer3 + '.</li>\n');
 } else {
   console.log('Sorry, ' + userName + ' but ' + question1 + ' is not my favorite color!');
-
   alert('Sorry, ' + userName + ' but ' + answer3 + ' really is my favorite color!');
+  document.write('<ul>\n<li>' + userName + ' didn\'t correctly guess that my favorite color is ' + answer3 + '.</li>\n');
 };
 
 
@@ -48,9 +48,11 @@ console.log(question2);
 if (question2.toLowerCase() === 'y') {
   console.log('Yup, I am ' + age);
   alert('Yup, I am ' + age);
+  document.write('<li>' + userName + ' correctly guessed that I\'m ' + age + '.</li>\n');
 } else {
   console.log('Wrong, I am ' + age + '.');
   alert('Wrong, I am ' + age + '.');
+  document.write('<li>' + userName + ' didn\'t correctly guess that I\'m ' + age + '.</li>\n');
 };
 
 //ask question 3
