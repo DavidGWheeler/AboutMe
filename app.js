@@ -155,7 +155,5 @@ for (var z = 0; z < 6; z++) {
     }
   }
   alert(workFeedback);
-  document.write('<li>' + userName + '\'s guess was: ' + workFeedback + '</li></ul>');
-  break;
 };
 console.log('Done guessing.');
