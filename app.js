@@ -25,74 +25,50 @@ if (userName === '') {
 } else {
   console.log('Hello ' + userName + '!');
   alert('Hello ' + userName + '!');
+  document.write('<section class="answers">\n<h4>' + userName + '\'s answers were: </h4>' + '\n');
 };
 
 //ask the first question
 var question1 = prompt('Is David\'s favorite color ' + answer3 + '? Y or N: ');
 console.log(question1);
-
-if (question1 === '' || question1 === NaN || question1 === null) {
-  console.log('User canceled:' + question1);
-  var question1conf = prompt('Are you sure you don\'t want to give an answer?');
-  console.log('confirmed: ' + question1conf);
-} else if (question1conf === 'y' || question1conf === null || question1conf === NaN || question1conf === '') {
-  console.log('confirmed' + question1conf);
-  alert(userName + 'Did not want to answer this one!');
-  //todo: document.write()
-} else if (question1.toLowerCase === 'y') {
+//  if (question1 === answer3) {
+if (question1.toLowerCase() === 'y') {
   console.log('Right! ' + userName + ' guessed my favorite color is ' + answer3 + '!');
-  console.log(question1);
   alert('Right! ' + userName + ' guessed my favorite color is ' + answer3 + '!');
-} else if (question1.toLowerCase === 'n'){
-  console.log(question1);
-  alert('Sorry, ' + userName + ' but that\'s wrong. ' + answer3 + ' really is my favorite color!');
 } else {
-  alert('Wat?!');
+  console.log('Sorry, ' + userName + ' but ' + question1 + ' is not my favorite color!');
+
+  alert('Sorry, ' + userName + ' but ' + answer3 + ' really is my favorite color!');
 };
 
-//ask the second question
 
+//ask the second question
 var question2 = prompt('Is David\'s age ' + age + '? Y or N: ');
 console.log(question2);
-
-if (question2 === '' || question2 === NaN || question2 === null) {
-  console.log('User canceled:' + question2);
-  var question2Conf = prompt('Are you sure you don\'t want to give an answer?');
-  console.log('confirmed: ' + question2Conf);
-} else if (question2Conf.toLowerCase === 'y' || question2Conf === null || question2Conf === NaN || question2Conf === '') {
-  console.log('confirmed' + question2Conf);
-  alert(userName + 'Did not want to answer this one!');
-} else if (question2.toLowerCase === 'y') {
-  console.log('Yup, I am ' + age + '.');
-  alert('Yup, I am ' + age + '.');
-} else if (question2.toLowerCase === 'n'){
+if (question2.toLowerCase() === 'y') {
+  console.log('Yup, I am ' + age);
+  alert('Yup, I am ' + age);
+} else {
   console.log('Wrong, I am ' + age + '.');
   alert('Wrong, I am ' + age + '.');
-} else {
-  alert('Wat?!');
 };
 
 //ask question 3
-var question3 = prompt('My pets are named:' + answer2[0] + ', ' + answer2[1] + 'and ' + answer2[0] + '\n' + 'Is the name of David\'s favorite pet ' + answer2[0] + '? Y or N: ');
-console.log(answer2[0,1,2]);
+var question3 = prompt('My pets are named:' + answer2[0] + ', ' + answer2[1] + ' and ' + answer2[2] + '.\n ' + 'Is the name of David\'s favorite pet ' + answer2[0] + '? Y or N: ').toLowerCase();
+console.log(answer2[0, 1, 2]);
 console.log(question3);
-
-if (question3 === '' || question3 === NaN || question3 === null) {
-  console.log('User canceled ' + question3);
-  var question3Conf = prompt('Are you sure you don\'t want to give an answer?');
-  console.log('confirmed: ' + question3Conf);
-} else if (question3Conf.toLowerCase === 'y' || question3Conf === null || question3Conf === NaN || question3Conf === '') {
-  console.log('confirmed' + question3Conf);
-  alert(userName + 'Did not want to answer this one!');
-} else if (question3.toLowerCase === 'y') {
-  console.log(answer2[0] + ' is the most gentle, sweet little pitbull ever!\n She is my favorite, but don\'t tell the cats!');
-  alert(answer2[0] + ' is the most gentle, sweet little pitbull ever!\n She is my favorite, but don\'t tell the cats!');
+if (question3 === 'y') {
+  console.log(answer2[0] + ' is the most gentle, sweet little pitbull ever!  She is my favorite, but don\'t tell the cats!');
+  alert(answer2[0] + ' is the most gentle, sweet little pitbull ever!  She is my favorite, but don\'t tell the cats!');
 } else if (question3 === 'n') {
-  console.log('Wrong. ' + answer2[1] + ' is so adorable!  She just isn\'t my favorite.\n' + answer2[2] + ', ' + ' is an old man of a cat at 16 years of age!\n Kinda smelly too...');
-  alert('Wrong, sorry. But ' + answer2[1] + ' is so adorable!  She just isn\'t my favorite.\n' + '"' + answer2[2] + '"' + ', ' + ' is an old man of a cat at 16 years of age!\n Kinda smelly too...\n The correct answer was ' + answer2[0] + '.');
+  console.log('Wrong. ' + answer2[1] + ' is so adorable!  She just isn\'t my favorite.' + answer2[2] + ' ' + ' is an old man of a cat at 16 years of age! Kinda smelly too...');
+  alert('Wrong. ' + answer2[1] + ' is so adorable!  She just isn\'t my favorite.' + answer2[2] + ' ' + ' is an old man of a cat at 16 years of age! Kinda smelly too...');
+} else if (question3 === answer2[2]) {
+  console.log(answer2[2] + ' is an old man of a cat at 16 years of age!');
+  alert(answer2[2] + ' is an old man of a cat at 16 years of age!');
 } else {
   console.log('Well, their names are actually ' + answer2[0] + ' ' + answer2[1] + ' and ' + answer2[2] + '.');
-  alert('Well, their names are actually ' + answer2[0] + ', ' + answer2[1] + ' and ' + answer2[2] + '.');
+  alert('Well, their names are actually ' + answer2[0] + ' ' + answer2[1] + ' and ' + answer2[2] + '.');
 };
 
 //ask question 4
@@ -145,26 +121,27 @@ for (var i = 0; i < 4; i++) {
 //question 7
 var workedAt = ['Nintendo ', 'Microsoft ', 'Amazon '];
 console.log(workedAt);
-for (var h = 0; h < 6; h++) {
+for (var z = 0; z < 6; z++) {
   var question7 = (prompt('Can you guess a company David has worked for?'));
   console.log(question7);
   for (var j = 0; j < workedAt.length; j++) {
     if (question7.toLowerCase() === workedAt[j].toLowerCase().trim()) {
       console.log('Correct');
       var workFeedback = 'Correct! David has worked at: ' + workedAt[0] + ' and ' + workedAt[1] + ' and ' + workedAt[2] + '.';
-      i = 6;
-      console.log(i);
+      z = 6;
+      console.log(z);
       break;
-    } else if (i === 5) {
+    } else if (z === 5) {
       workFeedback = 'That doesn\'t match any of the companies I have worked at: ' + workedAt[0] + ' and ' + workedAt[1] + ' and ' + workedAt[2] + '.';
-      console.log(i);
+      console.log(z);
       console.log('That doesn\'t match ' + workedAt);
+
     } else {
-      console.log(i);
+      console.log(z);
       workFeedback = 'That doesn\'t match any of the companies I have worked at. You have ' + (5 - i) + ' tries left.';
     }
   }
   alert(workFeedback);
-  break;
+  document.write('</ul>');
 };
 console.log('Done guessing.');

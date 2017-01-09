@@ -30,12 +30,17 @@ ul {
   margin-left: 25px;
 }
 
-li {
-  list-style-type: lower-greek;
+.bio li {
+  list-style-type: chevron;
+}
+
+.topTen ol {
+  reversed
+  clear: right;
 }
 
 .map {
-  border: 10px solid black;
+  border: 2px solid black;
 }
 
 .topTen {
@@ -48,10 +53,10 @@ li {
 }
 
 .topTen li {
-  animation-delay: 01;
   text-decoration: underline;
   font-family: cursive;
   font-style: oblique;
-  font-size: 2em;
+  font-size: 1.5em;
   margin-left: 15px;
+  margin-right: 30px;
 }
